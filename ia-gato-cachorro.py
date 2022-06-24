@@ -25,7 +25,7 @@ encoder = OrdinalEncoder()
 
 #print(set(dados['cor']))-->cores no dataset
 nomes_classes = ['Gato','Cachorro']
-tabela_cores = set(features['cor'])
+tabela_cores = list(set(features['cor']))
 features['cor'] = encoder.fit_transform(pd.DataFrame(features['cor']))
 features
 classes = encoder.fit_transform(pd.DataFrame(classes))
