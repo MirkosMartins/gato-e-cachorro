@@ -58,7 +58,7 @@ cor = st.selectbox('Informe a cor do animal:', tabela_cores)
 individuo = [st.session_state('peso'),st.session_state('cauda'),
              st.session_state('orelha'),tabela_cores.index(cor)]
 
-
-#testar a árvore
-predicao = arvore.predict([individuo])
-st.write('O animal previsto pela árvore é: '+nomes_classes[predicao])
+if st.button('Rodar a árvore'):
+    #testar a árvore
+    predicao = arvore.predict([individuo])
+    st.write('O animal previsto pela árvore é: '+nomes_classes[predicao])
