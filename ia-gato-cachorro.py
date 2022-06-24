@@ -61,4 +61,4 @@ individuo = [st.session_state.peso,st.session_state.cauda,
 if st.button('Rodar a árvore'):
     #testar a árvore
     predicao = arvore.predict([individuo])
-    st.write('O animal previsto pela árvore é: '+int(predicao))
+    st.write('O animal previsto pela árvore é: '+nomes_classes[int(predicao[0])])
